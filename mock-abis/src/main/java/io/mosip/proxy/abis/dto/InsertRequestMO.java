@@ -35,12 +35,17 @@ public class InsertRequestMO {
 	@Column(name = "referenceURL")
 	private String referenceURL;
 
+	@NotEmpty(message = FailureReasonsConstants.MISSING_AGE_AT_ENROLLMENT)
+	@NotNull(message = FailureReasonsConstants.MISSING_AGE_AT_ENROLLMENT)
+	@Column(name = "ageAtEnrollment")
+	private String ageAtEnrollment;
+
 	public InsertRequestMO() {
 		super();
 	}
 
 	public InsertRequestMO(String id, String version, String requestId, LocalDateTime requesttime, String referenceId,
-			String referenceURL) {
+			String referenceURL, String ageAtEnrollment) {
 		super();
 		this.id = id;
 		this.version = version;
@@ -48,6 +53,7 @@ public class InsertRequestMO {
 		this.requesttime = requesttime;
 		this.referenceId = referenceId;
 		this.referenceURL = referenceURL;
+		this.ageAtEnrollment = ageAtEnrollment;
 	}
 
 	public String getId() {
@@ -96,5 +102,13 @@ public class InsertRequestMO {
 
 	public void setReferenceURL(String referenceURL) {
 		this.referenceURL = referenceURL;
+	}
+
+	public String getAgeAtEnrollment() {
+		return ageAtEnrollment;
+	}
+
+	public void setAgeAtEnrollment(String ageAtEnrollment) {
+		this.ageAtEnrollment = ageAtEnrollment;
 	}
 }

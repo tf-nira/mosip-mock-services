@@ -19,4 +19,5 @@ public class FailureReasonsConstants {
 	public static final String INVALID_CBEFF_FORMAT = "16";
 	public static final String DATA_SHARE_URL_EXPIRED = "17";
 	public static final String BIOMETRIC_QUALITY_CHECK_FAILED = "18";
+	public static final String MISSING_AGE_AT_ENROLLMENT = "19";
 }
