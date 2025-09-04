@@ -11,6 +11,7 @@ public class IdentityRequest {
 	private LocalDateTime requesttime;
 	private String referenceId;
 	private String referenceUrl;
+	private String ageAtEnrollment;
 	private Gallery gallery = null;
 	private Flags flags;
 
@@ -78,12 +79,20 @@ public class IdentityRequest {
 		this.flags = flags;
 	}
 
+	public String getAgeAtEnrollment() {
+		return ageAtEnrollment;
+	}
+
+	public void setAgeAtEnrollment(String ageAtEnrollment) {
+		this.ageAtEnrollment = ageAtEnrollment;
+	}
+
 	public IdentityRequest() {
 		super();
 	}
 
 	public IdentityRequest(String id, String version, String requestId, LocalDateTime requesttime, String referenceId,
-			String referenceUrl, Gallery gallery, Flags flags) {
+			String referenceUrl, String ageAtEnrollment, Gallery gallery, Flags flags) {
 		super();
 		this.id = id;
 		this.version = version;
@@ -93,6 +102,7 @@ public class IdentityRequest {
 		this.referenceUrl = referenceUrl;
 		this.gallery = gallery;
 		this.flags = flags;
+		this.ageAtEnrollment = ageAtEnrollment;
 	}
 
 	public static class Gallery {
